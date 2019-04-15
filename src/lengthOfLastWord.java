@@ -4,7 +4,6 @@ class lengthOfLastWord {
             return 0;
         String[] words = s.split(" ");
         int n = words.length;
-        
         return words[n-1].length();
          
     }
