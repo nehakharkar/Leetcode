@@ -4,29 +4,28 @@ import java.io.InputStreamReader;
 
 class Solution {
     public void rotate(int[] nums, int k) {
-        
-        int k1 = k;
-        int[] temp = new int[k+1];
-        for(int i = 0; i<k+1 ; i++){
-            temp[i]= nums[i];
-        	
-
+        if(nums.length == 1) {
+        	return;
         }
-        for(int j = 0; j<=nums.length-k ; j++)
-        {
-           nums[j] = nums[k+1];
-           k++;
-           
-        }
-        int x =0;
-        for(int z = k1; z<=nums.length-1 ; z++)
-        {
-           nums[z] = temp[x];
-           x++;
-           
-        }
+       k = k%nums.length;
+       int low= 0;
+       int high = nums.length-1;
+       reverse(nums,low,high);
+       reverse(nums,low,k-1);
+       reverse(nums,k,high);
+      
+       
         
     }
+    static void reverse(int[] arr, int low , int high) {
+    	while(low<=high) 
+    	{
+    		int temp = arr[low];
+    		arr[low]= arr[high];
+    		arr[high] =temp;
+    		low++;
+    		high--;
+    	}
 }
 
 public class RotateArray {
