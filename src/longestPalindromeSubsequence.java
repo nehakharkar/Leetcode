@@ -11,7 +11,8 @@ public class longestPalindromeSubsequence {
 		for(int i = 0 ; i <no ; i++) 
 		{
 			String str = sc.next();
-			System.out.println(LPS(str.toCharArray(), 0,str.length()-1));
+			int n = str.length();
+			System.out.println(LPS(str.toCharArray(), 0,n-1));
 		}
 	}
 	public static int LPS(char str[] , int i , int j) {
@@ -21,7 +22,7 @@ public class longestPalindromeSubsequence {
 			return 1;
 			
 		}
-		if((str[i] == str[j]) && (i + 1 == j) )
+		if(str[i] == str[j] && i + 1 == j)
 		{
 			return 2;
 		}
