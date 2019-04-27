@@ -11,7 +11,7 @@ public class ListNode {
 class reverseLinkedList {
 	public ListNode reverseList(ListNode curr) {
 		ListNode prev = null;
-		ListNode next = null;s
+		ListNode next = null;
 		while (curr != null) 
 		{
 			next = curr.next;
