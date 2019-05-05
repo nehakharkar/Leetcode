@@ -1,12 +1,10 @@
 import java.util.Arrays;
 public class largestPerimeterTriangle {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] s = { 3, 2, 3, 4 };
 		System.out.println(largest(s));
 	}
-
 	static int largest(int[] s) {
 		Arrays.sort(s);
 		int sum = 0;
